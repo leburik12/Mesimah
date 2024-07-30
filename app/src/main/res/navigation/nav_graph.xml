@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mesimahFragment">
+
+    <fragment
+        android:id="@+id/mesimahFragment"
+        android:name="com.example.mesimah.MesimahFragment"
+        android:label="fragment_mesimah"
+        tools:layout="@layout/fragment_mesimah" >
+        <action
+            android:id="@+id/action_mesimahFragment_to_mesimahEditFragment"
+            app:destination="@id/mesimahEditFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mesimahEditFragment"
+        android:name="com.example.mesimah.MesimahEditFragment"
+        android:label="fragment_mesimah_edit"
+        tools:layout="@layout/fragment_mesimah_edit" >
+
+        <argument
+            android:name="taskId"
+            app:argType="long" />
+
+        <action
+            android:id="@+id/action_mesimahEditFragment_to_mesimahFragment"
+            app:destination="@id/mesimahFragment"
+            app:popUpTo="@+id/mesimahFragment"
+            app:popUpToInclusive="true"/>
+
+    </fragment>
+</navigation>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MesimahFragment">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.mesimah.viewmodel.TasksViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:layout_margin="8dp"
+            android:id="@+id/task_name"
+            android:hint="@string/task_prompt"
+            android:text="@={viewModel.newTaskName}"/>
+
+        <EditText
+            android:id="@+id/task_description"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:inputType="text|textMultiLine"
+            android:maxLength="2000"
+            android:layout_margin="8dp"
+            android:maxLines="4"
+            android:hint="task description"
+            android:text="@={viewModel.newTaskDescription}"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/save_button"
+            android:layout_gravity="center"
+            android:text="@string/btn_save"
+            android:onClick="@{() -> viewModel.addTask()}"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/tasks_list_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="top"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:spanCount="2"/>
+
+    </LinearLayout>
+</layout>

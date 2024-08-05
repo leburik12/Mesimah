@@ -35,6 +35,17 @@
             android:hint="task description"
             android:text="@={viewModel.newTaskDescription}"/>
 
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_open_date_picker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:text="@string/btn_select_date"
+            app:cornerRadius="16dp"
+            app:strokeColor="#145015"
+            app:strokeWidth="2dp"/>
+
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

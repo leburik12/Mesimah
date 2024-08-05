@@ -6,4 +6,9 @@
     <string name="btn_save">Save Task</string>
     <string name="hint_desc">Save Task</string>
     <string name="checkbox_text">Done?</string>
+    <string name="btn_select_date">Select Date</string>
+    <string name="delete_dialog_header">Confirm Delete</string>
+    <string name="delete_dialog_body">Are you sure you want to delete?</string>
+    <string name="btn_confirm">Confirm</string>
+    <string name="btn_cancel">Cancel</string>
 </resources>

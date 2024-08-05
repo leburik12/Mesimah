@@ -14,12 +14,6 @@ import com.example.mesimah.model.Mesimah
 class MesimahItemAdapter(val clickListener: (taskId: Long) -> Unit)
     : ListAdapter<Mesimah, MesimahItemAdapter.TaskItemViewHolder>(TaskDiffItemCallback()) {
 
-//    var data = listOf<Mesimah>()
-//        set(value) {
-//            field = value
-//            notifyDataSetChanged()
-//        }
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int)
         : TaskItemViewHolder = TaskItemViewHolder.inflateFrom(parent)
 
